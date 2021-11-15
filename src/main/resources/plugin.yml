@@ -1,0 +1,19 @@
+name: DuplicatesArrows
+version: ${project.version}
+main: net.kunmc.lab.duplicatesarrows.DuplicatesArrows
+api-version: 1.16
+authors: [ CANIS ]
+description: 拡散射撃プラグイン
+
+commands:
+  duparrow:
+    description: 放った矢が拡散する
+    usage: |
+      /duparrow addPlayer <Player>: 拡散射撃対象プレイヤーを指定する。@a、@r可。
+      /duparrow removePlayer <Player>: 拡散射撃対象プレイヤーから除外する。@a可。
+      /duparrow config check: Config設定値を確認する。
+      /duparrow config reset: Config設定値を初期化する。拡散射撃対象プレイヤーも初期化される。
+      /duparrow config multiple: 拡散射撃数を指定する。1以上の整数。
+      /duparrow config speed: 射撃スピード倍率を指定する。0より大きい数。
+      /duparrow config spread: 拡散射撃範囲を指定する。0より大きい数。
+    permission: op
