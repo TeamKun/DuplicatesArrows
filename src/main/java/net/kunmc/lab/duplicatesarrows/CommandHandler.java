@@ -49,7 +49,6 @@ public class CommandHandler implements CommandExecutor {
                                     }
                                     break;
                                 } else {
-                                    sender.sendMessage("debug");
                                     Player p = Bukkit.getPlayer(args[1]);
                                     if (p != null) {
                                         if (Config.playerList.contains(p)) {
@@ -111,14 +110,11 @@ public class CommandHandler implements CommandExecutor {
                                 sender.sendMessage("拡散範囲： " + Config.SPREAD);
                                 break;
                             case Config.COMMAND_MULTIPLE:
-                                sender.sendMessage("debug");
                                 if (Integer.parseInt(args[2]) < 1) {
                                     sender.sendMessage("拡散射撃数は1以上の整数である必要があります。");
                                     return false;
                                 }
-                                sender.sendMessage("debug");
                                 Config.MULTIPLE = Integer.parseInt(args[2]);
-                                sender.sendMessage("debug");
                                 sender.sendMessage("拡散射撃数： " + Config.MULTIPLE);
                                 break;
                             case Config.COMMAND_SPEED:
